@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RWD 電表展示</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 10px 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            .menu li {
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+
+        .menu-toggle {
+            display: none;
+            background-color: #111;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-title {
+            background-color: #00acc1;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 平板 RWD */
+        @media (max-width: 1249px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #111;
+            }
+
+                .menu li {
+                    border-top: 1px solid #333;
+                }
+
+                .menu.show {
+                    display: flex;
+                }
+
+            .menu-toggle {
+                display: block;
+                margin: auto;
+            }
+
+            .container {
+                flex-direction: row;
+                padding: 20px;
+            }
+
+            .card {
+                width: 45%;
+            }
+        }
+
+        /* 手機 RWD */
+        @media (max-width: 500px) {
+            .card {
+                width: 90%;
+            }
+
+                .card img {
+                    height: 180px;
+                }
+
+            .card-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>電表介紹</header>
+
+    <nav>
+        <button class="menu-toggle">☰</button>
+        <ul class="menu">
+            <li>機械電表1</li>
+            <li>機械電表2</li>
+            <li>電子電表</li>
+            <li>智慧電表</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-title">機械電表1</div>
+            <img src="https://www.peyshang.com/upload/images/2019052903172429676.png" alt="機械電表1">
+        </div>
+        <div class="card">
+            <div class="card-title">機械電表2</div>
+            <img src="https://lh6.googleusercontent.com/proxy/55K21nH9tXbTnseKX4TVW-BdxJsQydEXIfKBVQrL0zNy-DUJlSdznjPBG_PFPsWR51Nd8G6iyJC4a7h373zzDDlEO8i9_SphWSEeabbbZtJA7k77ozgzmP-VqkdlAQ" alt="機械電表2">
+        </div>
+        <div class="card">
+            <div class="card-title">電子電表</div>
+            <img src="https://www.peyshang.com/upload/201905290243338qz0h1.jpg" alt="電子電表">
+        </div>
+        <div class="card">
+            <div class="card-title">智慧電表</div>
+            <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2024/10/29/realtime/30806394.png&x=0&y=0&sw=0&sh=0&sl=W&fw=1050&exp=3600" alt="智慧電表">
+        </div>
+
+    </div>
+
+    <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+    </script>
+
+</body>
+</html>
