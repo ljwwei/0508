@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電影心得</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Microsoft JhengHei", sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 30px 0;
+            color: #333;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .left {
+            flex: 1 1 300px;
+            background-color: #00bfff;
+            color: darkblue;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+
+            .left iframe {
+                width: 100%;
+                height: 200px;
+                margin-top: 15px;
+                border: none;
+                background: none;
+                padding: 0;
+                transform: scale(1.75);
+                transform-origin: top center;
+            }
+
+            .left img {
+                display: block;
+                margin: 20px auto 0 auto;
+                max-width: 90%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+        .right {
+            flex: 2 1 700px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #fff0d6;
+        }
+
+        .right-left, .right-right {
+            flex: 1 1 50%;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .title-box {
+            background-color: #ffffff;
+            color: #000;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            border-left: 6px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .title-blue {
+            color: #003399;
+            border-left-color: #003399;
+            text-decoration: underline wavy #003399;
+        }
+
+        .title-pink {
+            color: deeppink;
+            border-left-color: deeppink;
+        }
+
+        .title-red {
+            color: firebrick;
+            border-left-color: firebrick;
+        }
+
+        /* 桌機（1250px以上） */
+        @media (min-width: 1250px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .right-left, .right-right {
+                flex: 1 1 50%;
+                padding: 20px;
+            }
+
+            .left, .right {
+                flex: 1 1 auto;
+                padding: 20px;
+            }
+
+            p, .title-box {
+                font-size: 16px;
+            }
+        }
+
+        /* 平板（501px ~ 1249px） */
+        @media (min-width: 501px) and (max-width: 1249px) {
+            h1 {
+                font-size: 26px;
+            }
+
+            .main {
+                flex-direction: row;
+            }
+
+            .right-left, .right-right {
+                flex: 1 1 100%;
+                padding: 15px;
+            }
+
+            .left, .right {
+                flex: 1 1 100%;
+                padding: 15px;
+            }
+
+            .title-box {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .left iframe {
+                height: 180px;
+                transform: scale(1.3);
+            }
+        }
+
+        /* 手機（320px ~ 500px） */
+        @media (max-width: 500px) {
+            body {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .main {
+                flex-direction: column;
+            }
+
+            .right-left, .right-right {
+                flex: 1 1 100%;
+                padding: 12px;
+            }
+
+            .left iframe {
+                height: 160px;
+                transform: scale(1.1);
+            }
+
+            .title-box {
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>電影心得</h1>
+
+    <div class="main">
+        <div class="left">
+            林杰暐
+            <img src="IMG_20240707_204853_307.jpg" alt="個人圖片">
+        </div>
+
+        <div class="right">
+            <div class="right-left">
+                <div class="section">
+                    <div class="title-box title-blue">電影中最讓我感動的地方</div>
+                    <p>《刻在你心底的名字》觸動我最深的，是主角們在困難時代中追尋真愛的勇氣與掙扎。那種明明心中有愛，卻無法坦然說出的痛苦，非常真實，讓我感受到青春中對自我與社會認同的掙扎。</p>
+                </div>
+                <div class="section">
+                    <div class="title-box title-pink">我最喜歡的一句台詞</div>
+                    <p>
+                        「我只是想要，跟一個人手牽手走在路上而已，怎麼這麼難？」<br><br>
+                        這句話簡單卻充滿力道，道出許多人的心聲。它讓我思考在自由的社會中，愛與尊重有多重要。
+                    </p>
+                </div>
+            </div>
+
+            <div class="right-right">
+                <div class="section">
+                    <div class="title-box title-red">主題曲歌詞：刻在我心底的名字</div>
+                    <p>
+                        多想要向過去告別<br>
+                        當季節不停更迭<br>
+                        卻還永遠少一點堅決<br>
+                        在這相同的地點<br>
+                        明天也這樣流淚<br>
+                        你是否 會想起我是誰<br><br>
+
+                        無法說出口的傷悲<br>
+                        任由時間都停歇<br>
+                        期待你某天能夠了解<br>
+                        我全部的世界<br>
+                        多想把你抱緊處理<br>
+                        刻在我心底的名字<br>
+                        忘記了時間這回事
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
